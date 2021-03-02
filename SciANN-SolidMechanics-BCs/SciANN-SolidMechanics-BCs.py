@@ -276,8 +276,8 @@ def train():
         
     np.savetxt(fname+"_Xmesh", X_plot, delimiter=', ')
     np.savetxt(fname+"_Ymesh", Y_plot, delimiter=', ')
-    np.savetxt(fname+"_lame1", lame1_pred.reshape(X_plot.shape), delimiter=', ')
-    np.savetxt(fname+"_lame2", lame2_pred.reshape(X_plot.shape), delimiter=', ')
+    np.savetxt(fname+"_lame1", lame1_pred, delimiter=', ')
+    np.savetxt(fname+"_lame2", lame2_pred, delimiter=', ')
     np.savetxt(fname+"_Uxy", Uxy_pred.reshape(X_plot.shape), delimiter=', ')
     np.savetxt(fname+"_Vxy", Vxy_pred.reshape(X_plot.shape), delimiter=', ')
     np.savetxt(fname+"_Exx", Exx_pred.reshape(X_plot.shape), delimiter=', ')
@@ -308,8 +308,8 @@ def plot():
     cust_pcolor(ax[0, 1], Xmesh, Ymesh, np.ones_like(Xmesh)*mu, "G*={:.3f}".format(mu))
     lmbd_pred = np.loadtxt(fname+"_lame1", delimiter=',')
     mu_pred = np.loadtxt(fname+"_lame2", delimiter=',')
-    cust_pcolor(ax[1, 0], Xmesh, Ymesh, lmbd_pred, "L={:.3f}".format(lmbd_pred.mean()))
-    cust_pcolor(ax[1, 1], Xmesh, Ymesh, mu_pred, "G={:.3f}".format(mu_pred.mean()))
+    cust_pcolor(ax[1, 0], Xmesh, Ymesh, np.ones_like(Xmesh)*lmbd_pred, "L={:.3f}".format(lmbd_pred.mean()))
+    cust_pcolor(ax[1, 1], Xmesh, Ymesh, np.ones_like(Xmesh)*mu_pred, "G={:.3f}".format(mu_pred.mean()))
     plt.savefig("{}_Parameters.png".format(output_file_name))
     
     fig, ax = plt.subplots(2, 2, figsize=(8, 6), dpi=300)
