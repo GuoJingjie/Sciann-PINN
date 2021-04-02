@@ -1,0 +1,3 @@
+[submodule "PINNeikonal"]
+	path = PINNeikonal
+	url = https://github.com/umairbinwaheed/PINNeikonal.git
