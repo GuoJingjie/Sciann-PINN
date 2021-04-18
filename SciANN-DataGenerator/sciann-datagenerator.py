@@ -612,7 +612,7 @@ def ex3():
         T=[0., 100.],
         targets=['domain', 'ic', 'bc-left', 'bc-right'], 
         num_sample=1000,
-        logT=True
+        logT=False
     )
     dg.plot_data()
     dg.plot_sample_batch(100)
