@@ -1,6 +1,6 @@
 # Constitutive model characterization and discovery using physics-informed deep learning
 
-In this repository, the data and codes for the paper titled "constitutive model characterization and discovery using physics-informed deep learning" will be shared. 
+In this repository, the data and codes for the paper titled "constitutive model characterization and discovery using physics-informed deep learning" are shared. 
 
 ```
 @article{haghighat2022constitutive,
@@ -10,3 +10,5 @@ In this repository, the data and codes for the paper titled "constitutive model 
   year={2022}
 }
 ```
+
+Note: Stochastic implementation relies on transfer learning, with weights coming from a converged training on one dataset. 
